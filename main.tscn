@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://s3ibjh5x3o3l"]
+[gd_scene load_steps=7 format=3 uid="uid://buy7tdwncrhfu"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_6qfv8"]
-[ext_resource type="PackedScene" uid="uid://c3gg8bv28go1n" path="res://Player.tscn" id="1_cu6lk"]
+[ext_resource type="PackedScene" path="res://Player.tscn" id="1_cu6lk"]
 [ext_resource type="Script" path="res://Player.gd" id="2_1q2x6"]
 [ext_resource type="Script" path="res://StaticBody2D.gd" id="4_bpong"]
 [ext_resource type="Texture2D" uid="uid://dsmu1ybg68dol" path="res://icon.svg" id="4_y7sng"]
@@ -11,6 +11,17 @@ size = Vector2(128, 128)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_6qfv8")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 403.0
+offset_top = 61.0
+offset_right = 644.0
+offset_bottom = 187.0
+theme_override_font_sizes/font_size = 60
+text = "Level 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_cu6lk")]
 position = Vector2(529, 304)
@@ -29,7 +40,11 @@ texture = ExtResource("4_y7sng")
 shape = SubResource("RectangleShape2D_jldvj")
 
 [node name="Button" type="Button" parent="."]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 737.0
+offset_top = 262.0
+offset_right = 1052.0
+offset_bottom = 393.0
+theme_override_font_sizes/font_size = 60
+text = "Next Level"
 
 [connection signal="mouse_entered" from="StaticBody2D" to="." method="_on_static_body_2d_mouse_entered"]
